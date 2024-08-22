@@ -22,3 +22,5 @@ jobs:
           fluentci run --wasm cypress verify
           fluentci run --wasm cypress info
           fluentci run --wasm bun run test:ci
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
