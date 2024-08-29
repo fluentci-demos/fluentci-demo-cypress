@@ -1,0 +1,11 @@
+[[steps]]
+name = "Install dependencies"
+command = ["fluentci run --wasm bun install"]
+
+[[steps]]
+name = "Run e2e tests"
+command = [
+  "fluentci run --wasm cypress verify",
+  "fluentci run --wasm cypress info",
+  "fluentci run --wasm bun run test:ci",
+]
